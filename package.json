@@ -1,7 +1,7 @@
 {
   "name": "@skyrpex/makes-uuids",
   "description": "Mixin for Vue that generates UUIDs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
