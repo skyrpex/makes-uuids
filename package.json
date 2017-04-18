@@ -1,0 +1,48 @@
+{
+  "name": "@skyrpex/makes-uuids",
+  "description": "Mixin for Vue that generates UUIDs",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/makes-uuids.cjs.js",
+  "module": "dist/makes-uuids.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "rollup --config --format cjs --output dist/makes-uuids.cjs.js",
+    "build:esm": "rollup --config --format es --output dist/makes-uuids.esm.js",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyrpex/makes-uuids.git"
+  },
+  "keywords": [
+    "lodash"
+  ],
+  "author": "cristian@pallares.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skyrpex/makes-uuids/issues"
+  },
+  "dependencies": {
+    "lodash": "^0.1 || ^1.0 || ^2.0 || ^3.0 || ^4.0",
+    "uuid": "^3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.0",
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.0.2",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1"
+  }
+}
